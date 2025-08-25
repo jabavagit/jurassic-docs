@@ -1,0 +1,18 @@
+{
+  "name": "jurassic-docs",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "prestart": "node ./scripts/generateRuntime.js",
+    "start": "docusaurus start",
+    "build": "node ./scripts/generateRuntime.js && docusaurus build",
+    "serve": "docusaurus serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.4.3",
+    "@docusaurus/preset-classic": "^2.4.3",
+    "@mdx-js/react": "^1.6.22",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

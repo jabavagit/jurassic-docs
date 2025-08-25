@@ -1,0 +1,290 @@
+/**
+ * 🦕 Jurassic Docs - Estilos personalizados
+ */
+
+/* Variables de color principales */
+:root {
+  --ifm-color-primary: #2e8b57;
+  --ifm-color-primary-dark: #267c4e;
+  --ifm-color-primary-darker: #246a42;
+  --ifm-color-primary-darkest: #1e5635;
+  --ifm-color-primary-light: #359960;
+  --ifm-color-primary-lighter: #3aa66c;
+  --ifm-color-primary-lightest: #4db778;
+  
+  /* Colores secundarios */
+  --ifm-color-secondary: #ff6b35;
+  --ifm-color-success: #00d2d3;
+  --ifm-color-info: #54a3ff;
+  --ifm-color-warning: #ffb400;
+  --ifm-color-danger: #fa383e;
+  
+  /* Tipografía */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  
+  /* Tamaños */
+  --ifm-font-size-base: 16px;
+  --ifm-spacing-horizontal: 1rem;
+  --ifm-spacing-vertical: 1rem;
+  
+  /* Bordes */
+  --ifm-global-radius: 8px;
+  --ifm-button-border-radius: 6px;
+  
+  /* Sombras */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema oscuro */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  
+  --ifm-background-color: #1b1b1d;
+  --ifm-background-surface-color: #242526;
+}
+
+/* Navbar personalizado */
+.navbar {
+  box-shadow: var(--ifm-global-shadow-md);
+  backdrop-filter: blur(8px);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar__item {
+  font-weight: 500;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Botones */
+.button {
+  font-weight: 600;
+  text-transform: none;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border: none;
+}
+
+/* Cards de características */
+.features {
+  padding: 4rem 0;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-tl);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.feature p {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+/* Sidebar personalizado */
+.menu__link {
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background: var(--ifm-menu-color-background-hover);
+  transform: translateX(4px);
+}
+
+.menu__link--active {
+  background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+/* Código y bloques */
+.prism-code {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* Callouts/Admonitions mejorados */
+.admonition {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.admonition-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tablas responsivas */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Badges personalizados */
+.badge {
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.badge--primary {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background: var(--ifm-color-secondary);
+  color: white;
+}
+
+.badge--success {
+  background: var(--ifm-color-success);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background: var(--ifm-color-primary-darker);
+  color: white;
+}
+
+.footer__title {
+  color: white;
+  font-weight: 700;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: white;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-wrapper {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .feature {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-scrollbar-track-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-scrollbar-thumb-background-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-scrollbar-thumb-hover-background-color);
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.margin-top--lg {
+  margin-top: 2rem;
+}
+
+.margin-bottom--lg {
+  margin-bottom: 2rem;
+}
+
+.padding--lg {
+  padding: 2rem;
+}
