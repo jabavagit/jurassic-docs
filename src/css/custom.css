@@ -134,21 +134,161 @@
   line-height: 1.6;
 }
 
-/* Sidebar personalizado */
+
+
+/* === DISEÑO LEGIBLE Y SUAVE PARA DOCUMENTACIÓN === */
+
+/* Sidebar diferenciado, fondo claro y borde sutil */
+.theme-doc-sidebar-container {
+  background: #effaf4;
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 2px 0 8px 0 #e0e0e0;
+  padding-top: 12px;
+}
+
+
+/* Sidebar items: legibles, activos destacados, hover notorio */
 .menu__link {
-  border-radius: var(--ifm-global-radius);
-  transition: all 0.2s ease;
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #267c4e;
+  font-family: 'Inter', 'Fira Sans', Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  box-shadow: 0 1px 2px #e0e0e0;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  padding-left: 18px;
 }
-
 .menu__link:hover {
-  background: var(--ifm-menu-color-background-hover);
-  transform: translateX(4px);
+  background: #d6f5e3;
+  color: #2e8b57;
+  box-shadow: 0 2px 8px #b2e2c7;
+  border-left: 5px solid #2e8b57;
+}
+.menu__link--active {
+  color: #2e8b57;
+  background: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px #b2e2c7;
+  border-left: 5px solid #ff6b35;
+  text-shadow: 0 1px 4px #267c4e44;
 }
 
-.menu__link--active {
-  background: var(--ifm-color-primary);
-  color: white;
-  font-weight: 600;
+/* Navbar claro y profesional */
+.navbar {
+  background: #f7f7fa;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 8px 0 #e0e0e0;
+}
+.navbar__title {
+  font-family: 'Fira Sans', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  color: #2e8b57;
+}
+.navbar__item {
+  color: #267c4e;
+}
+
+/* Panel principal fondo blanco y borde suave */
+.main-wrapper {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 8px 0 #e0e0e0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Footer claro y diferenciado */
+.footer {
+  background: #f7f7fa;
+  border-top: 2px solid #e0e0e0;
+  color: #2e8b57;
+}
+.footer__title {
+  color: #267c4e;
+  font-weight: 700;
+}
+.footer__link-item {
+  color: #2e8b57;
+}
+.footer__link-item:hover {
+  color: #ff6b35;
+}
+
+/* Botones suaves y legibles */
+.button {
+  font-family: 'Inter', 'Fira Sans', Arial, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background: #2e8b57;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 1px 2px #e0e0e0;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #359960;
+}
+
+/* Tablas limpias y legibles */
+table {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #222;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+}
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+}
+
+/* Código y bloques claros */
+.prism-code {
+  border: 1px solid #e0e0e0;
+  background: #f7f7fa;
+  color: #2e8b57;
+  font-family: 'Fira Mono', 'Cascadia Code', monospace;
+  font-size: 1rem;
+  box-shadow: 0 1px 2px #e0e0e0;
+}
+
+/* Admonitions suaves */
+.admonition {
+  border: 1px solid #e0e0e0;
+  background: #e6f7ee;
+  color: #267c4e;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 1px 2px #e0e0e0;
+}
+
+/* Scrollbar claro */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f7f7fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    border-width: 1px;
+    padding: 12px;
+  }
+  .theme-doc-sidebar-container {
+    border-right-width: 1px;
+    padding-top: 6px;
+  }
+  .navbar {
+    border-bottom-width: 1px;
+  }
+  .footer {
+    border-top-width: 1px;
+  }
 }
 
 /* Código y bloques */
