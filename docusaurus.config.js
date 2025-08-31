@@ -181,8 +181,8 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Jurassic Docs. Construido con 🦕 y ❤️.`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/dracula'),
+      theme: require('prism-react-renderer').themes.github,
+      darkTheme: require('prism-react-renderer').themes.dracula,
       additionalLanguages: ['bash', 'json', 'yaml'],
     },
     colorMode: {
